@@ -36,9 +36,21 @@ class ViewController: UIViewController, UISearchBarDelegate {
     }
 
     @IBAction func prevButtonTapped(_ sender: Any) {
+        if currentIndex > 0 {
+            currentIndex -= 1
+            displayProduct(at: currentIndex)
+        } else {
+            print("Reached the first product")
+        }
     }
     
     @IBAction func nextButtonTapped(_ sender: Any) {
+        if currentIndex < products.count - 1 {
+            currentIndex += 1
+            displayProduct(at: currentIndex)
+        } else {
+            print("Reached the last product")
+        }
     }
     
     func fetchProducts() {
