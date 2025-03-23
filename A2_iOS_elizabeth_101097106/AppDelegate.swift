@@ -76,6 +76,27 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }
     }
+    
+    func seedInitialDataIfNeeded() {
+        let context = persistentContainer.viewContext
+        let fetchRequest: NSFetchRequest<Product> = Product.fetchRequest()
+        
+        do {
+            let count = try context.count(for: fetchRequest)
+            if count == 0 {
+                for i in 1...10 {
+                    let product = Product(context: context)
+                    product.productID = UUID().uuidString
+                    product.name = "Product \(i)"
+                    product.productDescription = "Description for Product \(i)"
+                    product.price = Double(i * 10)
+                    product.provider = "Provider \(i)"
+                }
+                try context.save()
+            }
+        } catch {
+            print("Error seeding initial data: \(error)")
+        }
+    }
 
 }
-
