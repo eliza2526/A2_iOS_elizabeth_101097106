@@ -91,6 +91,7 @@
                         <outlet property="nameLabel" destination="bSG-qJ-MDr" id="wnP-zx-tym"/>
                         <outlet property="priceLabel" destination="NMR-Tk-LCz" id="Qex-iL-Q3b"/>
                         <outlet property="providerLabel" destination="DY5-xs-Mh6" id="7Qo-ED-trT"/>
+                        <outlet property="searchBar" destination="t0v-8B-vuU" id="hHj-C2-uZw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

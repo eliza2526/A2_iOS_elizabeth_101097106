@@ -8,7 +8,7 @@
 import UIKit
 import CoreData
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UISearchBarDelegate {
 
     @IBOutlet weak var idLabel: UILabel!
     @IBOutlet weak var nameLabel: UILabel!
@@ -16,6 +16,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var priceLabel: UILabel!
     @IBOutlet weak var providerLabel: UILabel!
  
+    @IBOutlet weak var searchBar: UISearchBar!
     
   
     var products: [Product] = []
@@ -31,6 +32,7 @@ class ViewController: UIViewController {
         if !products.isEmpty {
             displayProduct(at: 0)
         }
+        searchBar.delegate = self
     }
 
     @IBAction func prevButtonTapped(_ sender: Any) {
@@ -52,11 +54,37 @@ class ViewController: UIViewController {
     
     func displayProduct(at index: Int) {
         let product = products[index]
-        nameLabel.text = product.name
-        descriptionLabel.text = product.productDescription
-        priceLabel.text = "Price: \(product.price)"
-        providerLabel.text = "Provider: \(String(describing: product.provider))"
+        nameLabel.text = product.name ?? "Unknown Product Name"
+        descriptionLabel.text = product.productDescription ?? "No Description Available"
+       // priceLabel.text = "Price: \(product.price)"
+        priceLabel.text = String(format: "Price: $%.2f", product.price)
+        providerLabel.text = "Provider: \(product.provider ?? "Unknown Provider")"
         
+    }
+    
+    func searchProducts(with query: String) {
+        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        let fetchRequest: NSFetchRequest<Product> = Product.fetchRequest()
+        
+        fetchRequest.predicate = NSPredicate(format: "name CONTAINS[cd] %@ OR productDescription CONTAINS[cd] %@", query, query)
+        
+        do {
+            products = try context.fetch(fetchRequest)
+            
+            if !products.isEmpty {
+                displayProduct(at: 0)
+            } else {
+                print("No matching products found")
+            }
+        } catch {
+            print("Error searching for products: \(error)")
+        }
+    }
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        guard let query = searchBar.text, !query.isEmpty else { return }
+        searchProducts(with: query)
+        searchBar.resignFirstResponder()
     }
     
 }
