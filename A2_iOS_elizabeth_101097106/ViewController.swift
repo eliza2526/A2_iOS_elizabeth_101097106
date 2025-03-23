@@ -53,6 +53,15 @@ class ViewController: UIViewController, UISearchBarDelegate {
         }
     }
     
+    @IBAction func addProductButtonTapped(_ sender: UIBarButtonItem) {
+       /* let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        if let addProductVC = storyboard.instantiateViewController(withIdentifier: "AddProductViewController") as? AddProductViewController {
+            self.navigationController?.pushViewController(addProductVC, animated: true)
+        } */
+        performSegue(withIdentifier: "AddProductSegue", sender: self)
+    }
+    
+    
     func fetchProducts() {
         let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
         let fetchRequest: NSFetchRequest<Product> = Product.fetchRequest()

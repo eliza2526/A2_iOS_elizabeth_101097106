@@ -9,6 +9,15 @@ import UIKit
 
 class AddProductViewController: UIViewController {
 
+    @IBOutlet weak var nameTextField: UITextField!
+    
+    @IBOutlet weak var descriptionTextView: UITextField!
+    
+    @IBOutlet weak var priceTextField: UITextField!
+    
+    
+    @IBOutlet weak var providerTextField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -16,6 +25,8 @@ class AddProductViewController: UIViewController {
     }
     
 
+    @IBAction func saveButtonTapped(_ sender: Any) {
+    }
     /*
     // MARK: - Navigation
 

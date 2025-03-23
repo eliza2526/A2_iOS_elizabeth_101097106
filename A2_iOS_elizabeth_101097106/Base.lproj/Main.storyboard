@@ -79,7 +79,12 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem title="Products" id="Ctp-ss-N68">
-                                        <barButtonItem key="rightBarButtonItem" image="plus" catalog="system" id="6qc-ZJ-2fg"/>
+                                        <barButtonItem key="rightBarButtonItem" image="plus" catalog="system" id="6qc-ZJ-2fg">
+                                            <connections>
+                                                <action selector="addProductButtonTapped:" destination="BYZ-38-t0r" id="gHD-jQ-H1a"/>
+                                                <segue destination="deg-pK-xwM" kind="show" id="4WJ-As-eyo"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -106,6 +111,64 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="100" y="5"/>
+        </scene>
+        <!--Add Product View Controller-->
+        <scene sceneID="6ey-8D-mPo">
+            <objects>
+                <viewController storyboardIdentifier="AddProductViewController" id="deg-pK-xwM" customClass="AddProductViewController" customModule="A2_iOS_elizabeth_101097106" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="H20-Vt-FkM">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Product Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ta0-Fb-0NL">
+                                <rect key="frame" x="75" y="280" width="192" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Product Description" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ptO-Lt-KU8">
+                                <rect key="frame" x="75" y="350" width="192" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Product Price" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bqS-jx-FaA">
+                                <rect key="frame" x="75" y="417" width="97" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Product Provider" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0cQ-pW-KIU">
+                                <rect key="frame" x="75" y="493" width="97" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Aid-gn-sCi">
+                                <rect key="frame" x="109" y="593" width="126" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Save Product"/>
+                                <connections>
+                                    <action selector="saveButtonTapped:" destination="deg-pK-xwM" eventType="touchUpInside" id="iuX-p4-E1j"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="0iM-7S-mJY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <accessibility key="accessibilityConfiguration" identifier="AddProductSegue"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="7BT-9u-kJa"/>
+                    <connections>
+                        <outlet property="descriptionTextView" destination="ptO-Lt-KU8" id="EaM-gO-ATb"/>
+                        <outlet property="nameTextField" destination="Ta0-Fb-0NL" id="cDE-T7-bBA"/>
+                        <outlet property="priceTextField" destination="bqS-jx-FaA" id="jdl-m5-IU3"/>
+                        <outlet property="providerTextField" destination="0cQ-pW-KIU" id="qHA-p8-XzX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jXm-ht-EX0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="794.6564885496183" y="18.30985915492958"/>
         </scene>
     </scenes>
     <resources>
