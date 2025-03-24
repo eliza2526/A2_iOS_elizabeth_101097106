@@ -11,12 +11,12 @@ Product Description
 o
 Product Price
 o
-Product Provider
+Product Provider <br />
 •
-✔  - Completed -   When the application starts, it should automatically display the first product in database and allow the user to navigate through all the products.
+✔  - Completed -   When the application starts, it should automatically display the first product in database and allow the user to navigate through all the products.<br />
 •
-✔  - Completed -  User should also be able to search the database for a certain product by product name/product description.
+✔  - Completed -  User should also be able to search the database for a certain product by product name/product description.<br />
 •
-✔  - Completed -  User should be able to add new product to the application.
+✔  - Completed -  User should be able to add new product to the application.<br />
 •
-* Pending - User should be able to see the full list of products. On the list, the name and the description of the product should be provided
+* Pending - User should be able to see the full list of products. On the list, the name and the description of the product should be provided<br />
