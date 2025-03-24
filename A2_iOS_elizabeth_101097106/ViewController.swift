@@ -91,14 +91,31 @@ class ViewController: UIViewController, UISearchBarDelegate {
         
         do {
             products = try context.fetch(fetchRequest)
+            currentIndex = 0
             
             if !products.isEmpty {
                 displayProduct(at: 0)
             } else {
                 print("No matching products found")
+                idLabel.text = ""
+                nameLabel.text = ""
+                descriptionLabel.text = ""
+                priceLabel.text = ""
+                providerLabel.text = ""
             }
         } catch {
             print("Error searching for products: \(error)")
+        }
+    }
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String){
+        if !searchText.isEmpty {
+            searchProducts(with: searchText)
+        } else {
+            fetchProducts()
+            if !products.isEmpty {
+                displayProduct(at: 0)
+            }
         }
     }
     
