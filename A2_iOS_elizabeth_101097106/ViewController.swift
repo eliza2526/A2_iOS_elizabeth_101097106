@@ -34,6 +34,14 @@ class ViewController: UIViewController, UISearchBarDelegate {
         }
         searchBar.delegate = self
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        fetchProducts()
+        if !products.isEmpty {
+            displayProduct(at: currentIndex)
+        }
+    }
 
     @IBAction func prevButtonTapped(_ sender: Any) {
         if currentIndex > 0 {

@@ -37,7 +37,8 @@ class AddProductViewController: UIViewController {
         do {
             try context.save()
             print("Product Saved Successfully")
-            navigationController?.popViewController(animated: true)
+            //navigationController?.popViewController(animated: true)
+            self.dismiss(animated: true, completion: nil)
         } catch {
             print("Error saving product: \(error)")
         }
