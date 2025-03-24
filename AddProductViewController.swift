@@ -25,7 +25,22 @@ class AddProductViewController: UIViewController {
     }
     
 
-    @IBAction func saveButtonTapped(_ sender: Any) {
+    @IBAction func saveButtonTapped(_ sender: UIButton) {
+        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        let newProduct = Product(context: context)
+        newProduct.productID = UUID().uuidString
+        newProduct.name = nameTextField.text
+        newProduct.productDescription = descriptionTextView.text
+        newProduct.price = Double(priceTextField.text ?? "0") ?? 0
+        newProduct.provider = providerTextField.text
+        
+        do {
+            try context.save()
+            print("Product Saved Successfully")
+            navigationController?.popViewController(animated: true)
+        } catch {
+            print("Error saving product: \(error)")
+        }
     }
     /*
     // MARK: - Navigation
