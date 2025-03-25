@@ -17,6 +17,7 @@
 		9BD12BB82D908D1E007FEBB9 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 9BD12BB72D908D1E007FEBB9 /* Base */; };
 		9BD12BC52D908FF5007FEBB9 /* Product+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD12BC32D908FF5007FEBB9 /* Product+CoreDataClass.swift */; };
 		9BD12BC62D908FF5007FEBB9 /* Product+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD12BC42D908FF5007FEBB9 /* Product+CoreDataProperties.swift */; };
+		9BFE41C22D92F87D0021F675 /* ProductListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFE41BF2D92F87D0021F675 /* ProductListTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		9BD12BB92D908D1E007FEBB9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9BD12BC32D908FF5007FEBB9 /* Product+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Product+CoreDataClass.swift"; path = "A2_iOS_elizabeth_101097106/Product+CoreDataClass.swift"; sourceTree = "<group>"; };
 		9BD12BC42D908FF5007FEBB9 /* Product+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Product+CoreDataProperties.swift"; path = "A2_iOS_elizabeth_101097106/Product+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		9BFE41BF2D92F87D0021F675 /* ProductListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,6 +50,7 @@
 		9BD12B9C2D908D1D007FEBB9 = {
 			isa = PBXGroup;
 			children = (
+				9BFE41BF2D92F87D0021F675 /* ProductListTableViewController.swift */,
 				9B1E2AD32D90BFEC00754EA1 /* AddProductViewController.swift */,
 				9BD12BC32D908FF5007FEBB9 /* Product+CoreDataClass.swift */,
 				9BD12BC42D908FF5007FEBB9 /* Product+CoreDataProperties.swift */,
@@ -153,6 +156,7 @@
 				9BD12BAD2D908D1D007FEBB9 /* ViewController.swift in Sources */,
 				9B1E2AD42D90BFEC00754EA1 /* AddProductViewController.swift in Sources */,
 				9BD12BA92D908D1D007FEBB9 /* AppDelegate.swift in Sources */,
+				9BFE41C22D92F87D0021F675 /* ProductListTableViewController.swift in Sources */,
 				9BD12BAB2D908D1D007FEBB9 /* SceneDelegate.swift in Sources */,
 				9BD12BC52D908FF5007FEBB9 /* Product+CoreDataClass.swift in Sources */,
 				9BD12BC62D908FF5007FEBB9 /* Product+CoreDataProperties.swift in Sources */,

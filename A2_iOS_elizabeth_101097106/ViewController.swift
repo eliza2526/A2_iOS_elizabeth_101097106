@@ -133,5 +133,15 @@ class ViewController: UIViewController, UISearchBarDelegate {
         searchBar.resignFirstResponder()
     }
     
+    @IBAction func showAllProductsButtonTapped(_ sender: UIButton) {
+        performSegue(withIdentifier: "ProductListSegue", sender: nil)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "ProductListSegue",
+           let destinationVC = segue.destination as? ProductListTableViewController {
+            destinationVC.products = self.products
+        }
+    }
 }
 
