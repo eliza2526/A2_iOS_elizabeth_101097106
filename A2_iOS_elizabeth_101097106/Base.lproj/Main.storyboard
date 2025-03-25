@@ -120,33 +120,28 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Product Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ta0-Fb-0NL">
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Product Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ta0-Fb-0NL">
                                 <rect key="frame" x="75" y="280" width="192" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Product Description" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ptO-Lt-KU8">
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Product Description" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ptO-Lt-KU8">
                                 <rect key="frame" x="75" y="350" width="192" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Product Price" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bqS-jx-FaA">
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Product Price" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bqS-jx-FaA">
                                 <rect key="frame" x="75" y="417" width="97" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Product Provider" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0cQ-pW-KIU">
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Product Provider" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0cQ-pW-KIU">
                                 <rect key="frame" x="75" y="493" width="97" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Aid-gn-sCi">
-                                <rect key="frame" x="109" y="593" width="126" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Aid-gn-sCi">
+                                <rect key="frame" x="109" y="593" width="264" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Save Product"/>
                                 <connections>
@@ -157,6 +152,23 @@
                         <viewLayoutGuide key="safeArea" id="0iM-7S-mJY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <accessibility key="accessibilityConfiguration" identifier="AddProductSegue"/>
+                        <constraints>
+                            <constraint firstItem="0iM-7S-mJY" firstAttribute="trailing" secondItem="Ta0-Fb-0NL" secondAttribute="trailing" constant="126" id="1jv-Pq-byD"/>
+                            <constraint firstItem="ptO-Lt-KU8" firstAttribute="top" secondItem="Ta0-Fb-0NL" secondAttribute="bottom" constant="36" id="2Rf-0K-NZu"/>
+                            <constraint firstItem="Ta0-Fb-0NL" firstAttribute="trailing" secondItem="ptO-Lt-KU8" secondAttribute="trailing" id="CyY-oe-MYM"/>
+                            <constraint firstItem="Ta0-Fb-0NL" firstAttribute="leading" secondItem="0iM-7S-mJY" secondAttribute="leading" constant="75" id="ECM-XQ-O4m"/>
+                            <constraint firstItem="Aid-gn-sCi" firstAttribute="top" secondItem="0cQ-pW-KIU" secondAttribute="bottom" constant="66" id="JyA-4f-9YW"/>
+                            <constraint firstItem="Ta0-Fb-0NL" firstAttribute="leading" secondItem="ptO-Lt-KU8" secondAttribute="leading" id="NNU-PO-1ZM"/>
+                            <constraint firstItem="ptO-Lt-KU8" firstAttribute="leading" secondItem="bqS-jx-FaA" secondAttribute="leading" id="SBW-0y-mKu"/>
+                            <constraint firstItem="0iM-7S-mJY" firstAttribute="trailing" secondItem="bqS-jx-FaA" secondAttribute="trailing" constant="221" id="heI-fX-DwV"/>
+                            <constraint firstItem="Aid-gn-sCi" firstAttribute="leading" secondItem="0iM-7S-mJY" secondAttribute="leading" constant="109" id="jbo-n5-wFj"/>
+                            <constraint firstItem="0cQ-pW-KIU" firstAttribute="top" secondItem="bqS-jx-FaA" secondAttribute="bottom" constant="42" id="qGb-Ws-qHa"/>
+                            <constraint firstItem="bqS-jx-FaA" firstAttribute="leading" secondItem="0cQ-pW-KIU" secondAttribute="leading" id="qOK-Mr-3ub"/>
+                            <constraint firstItem="0iM-7S-mJY" firstAttribute="trailing" secondItem="Aid-gn-sCi" secondAttribute="trailing" constant="20" id="rsi-1m-XEu"/>
+                            <constraint firstItem="bqS-jx-FaA" firstAttribute="trailing" secondItem="0cQ-pW-KIU" secondAttribute="trailing" id="xb2-R4-GsG"/>
+                            <constraint firstItem="Ta0-Fb-0NL" firstAttribute="top" secondItem="0iM-7S-mJY" secondAttribute="top" constant="280" id="yl9-nR-gle"/>
+                            <constraint firstItem="bqS-jx-FaA" firstAttribute="top" secondItem="ptO-Lt-KU8" secondAttribute="bottom" constant="33" id="zYh-Iq-DCN"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="7BT-9u-kJa"/>
                     <connections>
