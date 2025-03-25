@@ -14,6 +14,10 @@ class ProductListTableViewController: UITableViewController {
         
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.title = "Product List"
+        let backButton = UIBarButtonItem(title: "Back", style: .plain, target: self, action: #selector(backButtonTapped))
+        self.navigationItem.leftBarButtonItem = backButton
        
         tableView.dataSource = self
         tableView.delegate = self
@@ -35,6 +39,10 @@ class ProductListTableViewController: UITableViewController {
         // #warning Incomplete implementation, return the number of sections
         return 0
     } */
+    
+    @objc func backButtonTapped() {
+        self.dismiss(animated: true, completion: nil)
+    }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows

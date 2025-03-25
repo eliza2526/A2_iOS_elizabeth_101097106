@@ -96,7 +96,7 @@
                                 <buttonConfiguration key="configuration" style="plain" title="Show all Products"/>
                                 <connections>
                                     <action selector="showAllProductsButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Pnu-os-Krf"/>
-                                    <segue destination="sun-Rm-NNB" kind="show" identifier="ProductListSegue" id="FwH-T8-Loq"/>
+                                    <segue destination="Hhg-G2-FxM" kind="show" identifier="ProductListSegue" id="FwH-T8-Loq"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -241,7 +241,26 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hHT-4U-kLs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1479" y="18"/>
+            <point key="canvasLocation" x="2405.3435114503814" y="17.605633802816904"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="tlN-Oo-rIM">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Hhg-G2-FxM" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="ukJ-vx-r79"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="BQ2-Te-Iu9">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="sun-Rm-NNB" kind="relationship" relationship="rootViewController" id="vSN-Mz-tnh"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jkZ-bi-pOj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1478.6259541984732" y="17.605633802816904"/>
         </scene>
     </scenes>
     <resources>
