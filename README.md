@@ -19,4 +19,4 @@ Product Provider <br />
 •
 <span style="color: green"> ✔  - Feature Completed - </span> User should be able to add new product to the application.<br />
 •
-<span style="color: yellow">  TableView List Products Pending - </span>  User should be able to see the full list of products. On the list, the name and the description of the product should be provided<br />
+<span style="color: green"> ✔   List All Products  - </span>  User should be able to see the full list of products. On the list, the name and the description of the product should be provided<br />
